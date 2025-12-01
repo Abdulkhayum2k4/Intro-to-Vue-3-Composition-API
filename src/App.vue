@@ -35,6 +35,13 @@ const updateVariant = (index) => {
   selectedVariant.value = index
 }
 
+const onSale = ref(true)
+
+const sale = computed(() => {
+  if (onSale.value) {
+    return `${brand.value} ${product.value} is on sale.`
+  }
+})
 </script>
   
 <template>
@@ -47,6 +54,7 @@ const updateVariant = (index) => {
       </div>
       <div class="product-info">
         <h1>{{ title }}</h1>
+        <p>{{ sale }}</p>
         <p v-if="inStock">In Stock</p>
         <p v-else>Out of Stock</p>
         <ul>
