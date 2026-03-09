@@ -2,11 +2,6 @@
 import { ref } from "vue";
 import socksGreenImage from "./assets/images/socks_green.jpeg";
 
-const product = ref("Socks");
-const image = ref(socksGreenImage);
-const inStock = ref(true);
-const inventory = ref(0);
-const onSale = true;
 // export default {
 //   data() {
 //     return {
@@ -78,6 +73,20 @@ const onSale = true;
 //     },
 //   },
 // };
+
+// export default {
+//   data() {
+//     return {
+//       numbers: [1, 2, 3, 4, 5],
+//     };
+//   },
+//   computed: {
+//     evenNumbers() {
+//       return this.numbers.filter((n) => n % 2 == 0);
+//     },
+//   },
+// };
+
 </script>
 
 <template>
@@ -96,8 +105,15 @@ const onSale = true;
 
     <button @click="count++">Increase</button>
   </div> -->
-  <p v-if="inStock">In stock</p>
-  <p v-else>Out of stock</p>
+
+  <!-- <div>
+    <p v-if="inStock">In stock</p>
+    <p v-else>Out of stock</p>
+  </div> -->
+
+  <div>
+    <li v-for="x in evenNumbers">{{ x }}</li>
+  </div>
 </template>
 
 <style scoped>
