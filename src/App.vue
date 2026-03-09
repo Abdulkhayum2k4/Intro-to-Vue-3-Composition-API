@@ -1,7 +1,4 @@
 <script>
-import { ref } from "vue";
-const instock = ref(true);
-
 // export default {
 //   data() {
 //     return {
@@ -73,7 +70,8 @@ const instock = ref(true);
 //     },
 //   },
 // };
-export default {};
+import {ref} from 'vue';
+const inStock = ref(true)
 </script>
 
 <template>
@@ -93,13 +91,13 @@ export default {};
     <button @click="count++">Increase</button>
   </div> -->
   <div>
-    <p v-if="instock">In stock</p>
-    <p v-else="instock">Out of stock</p>
+    <p v-if="inStock">In stock</p>
+    <p v-else>Out of stock</p>
   </div>
 </template>
 
-<!-- <style scoped>
+<style scoped>
 button {
   font-weight: bold;
 }
-</style> -->
+</style>
