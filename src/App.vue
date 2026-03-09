@@ -1,4 +1,12 @@
 <script>
+import { ref } from "vue";
+import socksGreenImage from "./assets/images/socks_green.jpeg";
+
+const product = ref("Socks");
+const image = ref(socksGreenImage);
+const inStock = ref(true);
+const inventory = ref(0);
+const onSale = true;
 // export default {
 //   data() {
 //     return {
@@ -70,8 +78,6 @@
 //     },
 //   },
 // };
-import {ref} from 'vue';
-const inStock = ref(true)
 </script>
 
 <template>
@@ -90,10 +96,8 @@ const inStock = ref(true)
 
     <button @click="count++">Increase</button>
   </div> -->
-  <div>
-    <p v-if="inStock">In stock</p>
-    <p v-else>Out of stock</p>
-  </div>
+  <p v-if="inStock">In stock</p>
+  <p v-else>Out of stock</p>
 </template>
 
 <style scoped>
