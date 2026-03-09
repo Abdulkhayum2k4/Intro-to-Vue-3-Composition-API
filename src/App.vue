@@ -86,7 +86,7 @@ import socksGreenImage from "./assets/images/socks_green.jpeg";
 //     },
 //   },
 // };
-
+const cart = ref(0)
 </script>
 
 <template>
@@ -110,9 +110,14 @@ import socksGreenImage from "./assets/images/socks_green.jpeg";
     <p v-if="inStock">In stock</p>
     <p v-else>Out of stock</p>
   </div> -->
-
+<!-- 
   <div>
     <li v-for="x in evenNumbers">{{ x }}</li>
+  </div> -->
+
+  <div>
+    <button v-on:click="cart += 1">click</button>
+    <p>{{ cart }}</p>
   </div>
 </template>
 
