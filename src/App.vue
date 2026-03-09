@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import socksGreenImage from "./assets/images/socks_green.jpeg";
+import socksBlueImage from "./assets/images/socks_blue.jpeg";
 
 // export default {
 //   data() {
@@ -86,7 +87,13 @@ import socksGreenImage from "./assets/images/socks_green.jpeg";
 //     },
 //   },
 // };
-const cart = ref(0)
+
+// const cart = ref(0)
+
+const variants = ref([
+  { color: "green", image: socksGreenImage },
+  { color: "blue", image: socksBlueImage },
+]);
 </script>
 
 <template>
@@ -110,15 +117,18 @@ const cart = ref(0)
     <p v-if="inStock">In stock</p>
     <p v-else>Out of stock</p>
   </div> -->
-<!-- 
+  <!-- 
   <div>
     <li v-for="x in evenNumbers">{{ x }}</li>
   </div> -->
 
-  <div>
+  <!-- <div>
     <button v-on:click="cart += 1">click</button>
     <p>{{ cart }}</p>
-  </div>
+  </div> -->
+
+  <img src="">
+  <div v-for="variant in variants" >{{ variant.color }}</div>
 </template>
 
 <style scoped>
