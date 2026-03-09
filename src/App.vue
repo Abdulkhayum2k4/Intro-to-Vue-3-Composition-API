@@ -95,8 +95,8 @@ const variants = ref([
   { color: "green", image: socksGreenImage },
   { color: "blue", image: socksBlueImage },
 ]);
-const updateImage = (value)=>{
-  
+const updateImage = (img)=>{
+  image.value = img
 }
 </script>
 
@@ -132,7 +132,7 @@ const updateImage = (value)=>{
   </div> -->
 
   <img :src="image">
-  <div v-for="variant in variants" @mouseover="variant.image">{{ variant.color }}</div>
+  <div v-for="variant in variants" @mouseover="updateImage">{{ variant.color }}</div>
 </template>
 
 <style scoped>
