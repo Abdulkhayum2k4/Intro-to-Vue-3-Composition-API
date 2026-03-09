@@ -90,10 +90,14 @@ import socksBlueImage from "./assets/images/socks_blue.jpeg";
 
 // const cart = ref(0)
 
+const image = ref(socksGreenImage)
 const variants = ref([
   { color: "green", image: socksGreenImage },
   { color: "blue", image: socksBlueImage },
 ]);
+const updateImage = (value)=>{
+  
+}
 </script>
 
 <template>
@@ -127,8 +131,8 @@ const variants = ref([
     <p>{{ cart }}</p>
   </div> -->
 
-  <img src="">
-  <div v-for="variant in variants" >{{ variant.color }}</div>
+  <img :src="image">
+  <div v-for="variant in variants" @mouseover="variant.image">{{ variant.color }}</div>
 </template>
 
 <style scoped>
