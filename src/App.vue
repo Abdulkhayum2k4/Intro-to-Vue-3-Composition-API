@@ -90,14 +90,14 @@ import socksBlueImage from "./assets/images/socks_blue.jpeg";
 
 // const cart = ref(0)
 
-const image = ref(socksGreenImage)
-const variants = ref([
-  { color: "green", image: socksGreenImage },
-  { color: "blue", image: socksBlueImage },
-]);
-const updateImage = (img)=>{
-  image.value = img
-}
+// const image = ref(socksGreenImage);
+// const variants = ref([
+//   { color: "green", image: socksGreenImage },
+//   { color: "blue", image: socksBlueImage },
+// ]);
+// const updateImage = (img) => {
+//   image.value = img;
+// };
 </script>
 
 <template>
@@ -130,9 +130,11 @@ const updateImage = (img)=>{
     <button v-on:click="cart += 1">click</button>
     <p>{{ cart }}</p>
   </div> -->
-
-  <img :src="image">
-  <div v-for="variant in variants" @mouseover="updateImage">{{ variant.color }}</div>
+<!-- 
+  <img :src="image" />
+  <div v-for="variant in variants" @mouseover="updateImage(variant.image)">
+    {{ variant.color }}
+  </div> -->
 </template>
 
 <style scoped>
