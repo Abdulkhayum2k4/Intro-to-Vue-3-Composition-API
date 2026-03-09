@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import { ref } from "vue";
 import socksGreenImage from "./assets/images/socks_green.jpeg";
 import socksBlueImage from "./assets/images/socks_blue.jpeg";
@@ -98,6 +98,19 @@ import socksBlueImage from "./assets/images/socks_blue.jpeg";
 // const updateImage = (img) => {
 //   image.value = img;
 // };
+
+export default {
+  data() {
+    return {
+      count : 0,
+    };
+  },
+  methods:{
+    increase(){
+      return this.count++;
+    }
+  }
+};
 </script>
 
 <template>
@@ -135,6 +148,10 @@ import socksBlueImage from "./assets/images/socks_blue.jpeg";
   <div v-for="variant in variants" @mouseover="updateImage(variant.image)">
     {{ variant.color }}
   </div> -->
+
+  <div>{{ count }}</div>
+  <button @click="count++">Click</button>
+  <button @click="increase">Click</button>
 </template>
 
 <style scoped>
