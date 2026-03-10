@@ -99,17 +99,60 @@ import socksBlueImage from "./assets/images/socks_blue.jpeg";
 //   image.value = img;
 // };
 
+// export default {
+//   data() {
+//     return {
+//       count : 0,
+//     };
+//   },
+//   methods:{
+//     increase(){
+//       return this.count++;
+//     }
+//   }
+// };
+
+// export default {
+//   data() {
+//     return {
+//       name: "abdul",
+//     };
+//   },
+//   methods: {
+//     greet() {
+//       alert(`Name: ${this.name}`);
+//     },
+//     say(message) {
+//       alert(`Name: ${message}`);
+//     },
+//   },
+// };
+
+// export default {
+//   methods: {
+//     parentClick() {
+//       console.log("parent clicked");
+//     },
+//     childClick() {
+//       console.log("child clicked");
+//     },
+//   },
+// };
+
+// export default {
+//   methods: {
+//     submitForm() {
+//       console.log("Form submitted without page reload");
+//     },
+//   },
+// };
+
 export default {
-  data() {
-    return {
-      count : 0,
-    };
+  methods: {
+    boxClicked() {
+      console.log("Div clicked");
+    },
   },
-  methods:{
-    increase(){
-      return this.count++;
-    }
-  }
 };
 </script>
 
@@ -143,15 +186,34 @@ export default {
     <button v-on:click="cart += 1">click</button>
     <p>{{ cart }}</p>
   </div> -->
-<!-- 
+  <!-- 
   <img :src="image" />
   <div v-for="variant in variants" @mouseover="updateImage(variant.image)">
     {{ variant.color }}
   </div> -->
 
-  <div>{{ count }}</div>
-  <button @click="count++">Click</button>
-  <button @click="increase">Click</button>
+  <!-- <div>
+    <p>{{ count }}</p>
+    <button @click="count++">Click</button>
+    <button @click="increase">Click</button>
+  </div> -->
+
+  <!-- <div>
+    <button @click="greet">Greet 1</button>
+    <button @click="say('anuna')">Greet 2</button>
+  </div> -->
+
+  <!-- <div @click="parentClick">
+    <button @click.stop="childClick">Click</button>
+  </div> -->
+
+  <!-- <form @submit.prevent="submitForm">
+    <button type="submit">Submit</button>
+  </form> -->
+
+  <!-- <div @click.self="boxClicked">
+    <button>Inner Button</button>
+  </div> -->
 </template>
 
 <style scoped>
