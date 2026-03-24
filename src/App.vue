@@ -546,8 +546,7 @@ export default {
   <button @click="count++">click</button>
 </template> -->
 
-
-<script>
+<!-- <script>
 import Login from "./components/Login.vue";
 export default{
   components:{
@@ -557,4 +556,164 @@ export default{
 </script>
 <template>
   <Login name="abdul" :age="21"/>
+</template> -->
+
+<!-- <script>
+import Login from "./components/Login.vue";
+export default {
+  data() {
+    return{
+      userName: "abdul"
+    }
+  },
+  components: {
+    Login,
+  },
+};
+</script>
+<template>
+  <Login :name="userName" age="21" cls="" />
+</template> -->
+
+<!-- <script>
+import Child from "./components/Child.vue";
+export default {
+  components: {
+    Child,
+  },
+  methods: {
+    handleGreet() {
+      alert("Hello from Child!");
+    },
+  },
+};
+</script>
+
+<template>
+  <Child @greet="handleGreet" />
+</template> -->
+
+<!-- <script>
+import Child from "./components/Child.vue";
+export default {
+  components:{
+    Child
+  },
+  methods: {
+    recieveName(name) {
+      console.log(name);
+    },
+  },
+};
+</script>
+<template>
+  <Child @sendName="recieveName"/>
+</template> -->
+
+<!-- <script>
+import Child from "./components/Child.vue";
+
+export default {
+  components: {
+    Child,
+  },
+
+  methods: {
+    handleGreet(name, age) {
+      console.log(name, age);
+    },
+  },
+};
+</script>
+
+<template>
+  <div>
+    <Child @greet="handleGreet" />
+  </div>
+</template> -->
+
+<!-- <script>
+import Child from "./components/Child.vue";
+export default {
+  components: {
+    Child,
+  },
+  methods: {
+    recieveMsg(name, age) {
+      console.log(name, age);
+    },
+  },
+};
+</script>
+<template>
+  <Child @greet="recieveMsg"/>
+</template> -->
+
+<!-- <script>
+export default {
+  data() {
+    return {
+      isActive: true,
+    };
+  },
+  methods: {
+    toggle() {
+      this.isActive = !this.isActive;
+    },
+  },
+};
+</script>
+
+<style>
+.active {
+  color: red;
+}
+</style>
+
+<template>
+  <p :class="{ active: isActive }">hello</p>
+  <button @click="toggle">Toggle</button>
+</template> -->
+
+<!-- <script>
+import Child from './components/Child.vue';
+export default{
+  components:{
+    Child
+  },
+  methods:{
+    handleMsg(){
+      alert("hello")
+    }
+  }
+}
+</script>
+<template>
+  <Child @greet="handleMsg"/>
+</template> -->
+
+<template>
+  <Child v-model="name" />
+  <p>{{ name }}</p>
 </template>
+
+<script>
+import Child from "./components/Child.vue";
+export default {
+  components: { Child },
+  data() {
+    return {
+      name: "",
+    };
+  },
+};
+</script>
+
+<!-- <template>
+    <nav>
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
+    <router-view />
+</template> -->
+
