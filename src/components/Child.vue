@@ -78,7 +78,7 @@ export default {
   <button @click="sendMsg">Click</button>
 </template> -->
 
-<script>
+<!-- <script>
 export default {
   props: ["modelValue"],
   emits: ["update:modelValue"],
@@ -91,5 +91,5 @@ export default {
 </script>
 <template>
   <input :value="modelValue" @input="updateValue" />
-</template>
+</template> -->
 

@@ -703,7 +703,7 @@ export default {
   components: { Child },
   data() {
     return {
-      name: "abdul",
+      name: "",
     };
   },
 };
