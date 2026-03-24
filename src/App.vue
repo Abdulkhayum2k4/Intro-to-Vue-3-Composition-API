@@ -703,7 +703,7 @@ export default {
   components: { Child },
   data() {
     return {
-      name: "",
+      name: "abdul",
     };
   },
 };
@@ -716,4 +716,3 @@ export default {
     </nav>
     <router-view />
 </template> -->
-
