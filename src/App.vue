@@ -692,27 +692,102 @@ export default{
   <Child @greet="handleMsg"/>
 </template> -->
 
-<template>
+
+<!-- <template>
   <Child v-model="name" />
   <p>{{ name }}</p>
 </template>
-
 <script>
 import Child from "./components/Child.vue";
 export default {
-  components: { Child },
+  components: {
+    Child,
+  },
   data() {
     return {
       name: "",
     };
   },
 };
-</script>
+</script> -->
 
-<!-- <template>
-    <nav>
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+<!-- <script>
+import Slot from "./components/Slot.vue";
+export default {
+  components: { Slot },
+};
+</script>
+<template>
+  <Slot></Slot>
+  <Slot>content</Slot>
+  <Slot><h1>content</h1></Slot>
+  <Slot><img src="https://picsum.photos/200" style="width: 100px;"></Slot>
 </template> -->
+
+<!-- <script>
+import Slot from "./components/Slot.vue";
+export default {
+  components: { Slot },
+};
+</script>
+<template>
+  <Slot>
+    <template v-slot:header>
+      <h3>Header</h3>
+    </template>
+    <template v-slot:default>
+      <img src="https://picsum.photos/200" style="width: 100px" />
+    </template>
+    <template v-slot:footer>
+      <button>click</button>
+    </template>
+  </Slot>
+</template> -->
+
+<!-- <script>
+import NameList from "./components/NameList.vue";
+export default {
+  components: { NameList },
+};
+</script>
+<template>
+  <NameList>
+    <template v-slot:default="slotProps">
+      {{ slotProps.firstName }} {{ slotProps.lastName }}
+    </template>
+  </NameList>
+  <NameList>
+    <template v-slot:default="slotProps">
+      {{ slotProps.lastName }} {{ slotProps.firstName }}
+    </template>
+  </NameList>
+  <NameList>
+    <template v-slot:default="slotProps">
+      {{ slotProps.lastName }}
+    </template>
+  </NameList>
+</template> -->
+
+<!-- <script>
+import ChildTwo from "./components/ChildTwo.vue";
+export default {
+  components: { ChildTwo },
+  provide(){
+    return{
+      message:"message from parent to grand child"
+    }
+  }
+};
+</script>
+<template>
+  <ChildTwo />
+</template> -->
+
+
+<template>
+  <nav>
+    <router-link to="/home">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view />
+</template>

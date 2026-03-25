@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <footer>
     <p>© 2026 My Website</p>
   </footer>
@@ -13,4 +13,4 @@ export default {
   p{
     background-color: darkgray;
   }
-</style> -->
+</style>
